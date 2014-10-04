@@ -1,0 +1,131 @@
+<html>
+
+<head>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="material/css-compiled/ripples.min.css" rel="stylesheet">
+    <link href="material/css-compiled/material-wfont.min.css" rel="stylesheet">
+    <link href="material/scripts/login.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="lib/sweet-alert.min.js"></script> <link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
+    <style type="text/css">
+    
+    @font-face {
+        font-family: brandonGrotesque;
+        src: url('fonts/Brandon_reg.otf');
+    }
+    
+    h1 {
+        font-family: brandonGrotesque;
+    }
+    </style>
+
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+    tab = $('.tabs h3 a');
+
+    tab.on('click', function(event) {
+        event.preventDefault();
+        tab.removeClass('active');
+        $(this).addClass('active');
+
+        tab_content = $(this).attr('href');
+        $('div[id$="tab-content"]').removeClass('active');
+        $(tab_content).addClass('active');
+    });
+});
+    </script>
+
+    <script type="text/javascript">
+
+    $(window).load(function () {
+         swal({title: "Not Logged In", text: "You need to sign in to use Woof!", type: "error", confirmButtonText: "Okay"});
+    });
+
+    </script>
+
+
+</head>
+<body>
+        <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '766684436726376',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+
+    <!-- Your site -->
+    <div class="header">
+        <h1>Woof</h1>
+        <!-- <a href="javascript:void(0)" class="btn btn-primary" style="float:right">Sign In</a> -->
+    </div>
+
+    <div class="form-wrap">
+        <h1 style="padding:8px">Post Update</h1>
+        <div class="tabs">
+        </div><!--.tabs-->
+
+        <div class="tabs-content">
+            <div id="signup-tab-content" class="active">
+                <form class="signup-form" action="" method="post">
+                    <input type="email" class="input" id="user_email" autocomplete="off" placeholder="Your Status Update:">
+                    <input type="submit" class="button" value="Post">
+                </form><!--.login-form-->
+                <div class="help-text">
+
+                </div><!--.help-text-->
+            </div><!--.signup-tab-content-->
+
+            <div id="login-tab-content">
+                <form class="login-form" action="" method="post">
+                    <input type="text" class="input" id="user_login" autocomplete="off" placeholder="Email or Username">
+                    <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
+                    <input type="checkbox" class="checkbox" id="remember_me">
+                    <label for="remember_me">Remember me</label>
+
+                    <input type="submit" class="button" value="Login">
+                </form><!--.login-form-->
+                <div class="help-text">
+                    <p><a href="#">Forget your password?</a></p>
+                </div><!--.help-text-->
+            </div><!--.login-tab-content-->
+                                                <div
+                            class="fb-like"
+                             data-share="true"
+                            data-width="450"
+                            data-show-faces="true">
+
+
+                </div>
+                <a href="https://twitter.com/afallon02" class="twitter-follow-button" data-show-count="false">Follow @afallon02</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div><!--.tabs-content-->
+    </div><!--.form-wrap-->
+    
+
+
+    <!-- Your site ends -->
+
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="material/scripts/ripples.js"></script>
+    <script src="material/scripts/material.js"></script>
+
+</body>
+
+</html>
