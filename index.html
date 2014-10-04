@@ -10,7 +10,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="lib/sweet-alert.min.js"></script> <link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
     <style type="text/css">
-    
+
     @font-face {
         font-family: brandonGrotesque;
         src: url('fonts/Brandon_reg.otf');
@@ -19,6 +19,31 @@
     h1 {
         font-family: brandonGrotesque;
     }
+
+    #header {
+        width: 100%;
+        height: 50px;
+        background: #2174B3;
+    }
+    #title {
+        font-family: brandonGrotesque;
+        font-size: 48px;
+        padding: 10px;
+        color: white;
+    }
+    .circular {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    background: url(http://www.insidefacebook.com/wp-content/uploads/2013/01/profile-150x150.png) no-repeat;
+    position: fixed; /* or absolute */
+    top: 15%;
+    left: 15%;
+    }
+
+
     </style>
 
     <script type="text/javascript">
@@ -69,10 +94,14 @@
 
 
     <!-- Your site -->
-    <div class="header">
-        <h1>Woof</h1>
+    <div id="header">
+        <div id="title">Woof
+            
+        </div>
         <!-- <a href="javascript:void(0)" class="btn btn-primary" style="float:right">Sign In</a> -->
     </div>
+
+    <div class="circular"></div>
 
     <div class="form-wrap">
         <h1 style="padding:8px">Post Update</h1>
@@ -83,7 +112,7 @@
             <div id="signup-tab-content" class="active">
                 <form class="signup-form" action="" method="post">
                     <input type="email" class="input" id="user_email" autocomplete="off" placeholder="Your Status Update:">
-                    <input type="submit" class="button" value="Post">
+                    <input type="submit" class="button" value="Post" style="background-color:#2174B3">
                 </form><!--.login-form-->
                 <div class="help-text">
 
